@@ -1,0 +1,21 @@
+/* Base Styles */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: silver;
+}
+
+.canvas{
+  background-color: white;
+}
+
