@@ -28,7 +28,7 @@ import Vector from './classes/Vector.js';
         balls5.forEach(ball => ball.draw());
         requestAnimationFrame(drawBalls);
         ctx.font = "20px Calibri";
-        ctx.fillText("Hello World", 10, 50);
+        ctx.fillText("Hello World", 100, 100);
     }
 
     const init = () => {
