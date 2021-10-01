@@ -65,7 +65,7 @@ import Vector from './classes/Vector.js';
             pushBalls();
         }else{
             for (let i = 0; i < 100; i++) {
-                ballspink.push(new Particle($canvas, random(0,$canvas.width),random(0,$canvas.height), `red`, size));
+                ballspink.push(new Particle($canvas, random(0,$canvas.width),random(0,$canvas.height), `red`, 15));
             }
         }
 
