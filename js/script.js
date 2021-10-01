@@ -46,8 +46,10 @@ import Vector from './classes/Vector.js';
 
         if(name.count > 200000){
             size = 4;
+        }else if(name.count < 200000 && name.count > 100000){
+            size = 4;  
         }else if(name.count < 100000 && name.count > 50000){
-            size = 5;  
+            size = 6;  
         }else if(name.count < 50000 && name.count > 10000){
             size = 10;
         }else if(name.count < 10000 && name.count > 1000){
@@ -74,6 +76,8 @@ import Vector from './classes/Vector.js';
     const countBalls = () =>{
         if(name.count > 200000){
             return 100;
+        }else if(name.count < 200000 && name.count > 100000){
+            return 70;  
         }else if(name.count < 100000 && name.count > 50000){
             return 50;  
         }else if(name.count < 50000 && name.count > 10000){
