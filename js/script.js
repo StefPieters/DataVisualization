@@ -127,7 +127,7 @@ import Vector from './classes/Vector.js';
             ctx.fillText(`${name.count} in the database`, $canvas.width/2, $canvas.height/2+15); 
             ctx.font = "15px Calibri";
             //console.log(name.count);
-            ctx.fillText(`Change of being ${name.gender}: ${Math.round(name.probability*100)}%`, $canvas.width/2, $canvas.height/2+40); 
+            ctx.fillText(`Chance of being ${name.gender}: ${Math.round(name.probability*100)}%`, $canvas.width/2, $canvas.height/2+40); 
         } else{
             ctx.font = "40px Calibri";
             ctx.fillStyle = "black";
