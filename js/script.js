@@ -122,10 +122,10 @@ import Vector from './classes/Vector.js';
 
     const drawText = () => {
         if(name.count > 0){
-            ctx.font = "60px arial";
+            ctx.font = "50px arial";
             ctx.fillStyle = "black";
             ctx.textAlign = "center";
-            ctx.fillText(`${name.name}`, $canvas.width/2, $canvas.height/2-10);
+            ctx.fillText(`${name.name.toUpperCase()}`, $canvas.width/2, $canvas.height/2-10);
             ctx.font = "20px Calibri";
             //console.log(name.count);
             ctx.fillText(`${name.count} in the database`, $canvas.width/2, $canvas.height/2+15); 
