@@ -9,13 +9,44 @@ html {
 
 html, body{
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: silver;
+    background-color: rgb(108, 0, 117);
 }
-
-.canvas{
+canvas{
+  
   background-color: white;
+  
 }
 
+.canvasdiv{
+  display:flex;
+  justify-content:center;
+  padding-top:1rem;
+}
+
+.form-name{
+  display:flex;
+  justify-content:center;
+  padding-top:1rem;
+  color:white;
+}
+
+.buttondiv{
+  display:flex;
+  justify-content:center;
+  padding-top:1rem;
+}
+.namelabel{
+  display:flex;
+  justify-content:center;
+  padding-bottom:1rem;
+}
+
+.title{
+  color:white;
+  display:flex;
+  justify-content:center;
+  padding-top:1.5rem;
+  font-size:2rem;
+  font-family:roboto;
+  
+}

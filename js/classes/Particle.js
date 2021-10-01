@@ -1,39 +1,39 @@
 import Vector from './Vector.js';
 import {random} from '../functions/lib.js';
 
-class Particle {
-    constructor($canvas, mouse, x, y, color) {
-        this.$canvas = $canvas;
-        this.ctx = $canvas.getContext(`2d`);
-        this.mouse = mouse;
+class Particle{
+    constructor($canvas, x, y, color, size){
+    this.$canvas = $canvas;
+    this.ctx = $canvas.getContext('2d');
+    this.color = color;
+    this.size = size;
 
-        this.location = new Vector(x, y);
-        this.velocity = new Vector(random(-1,1), random(-1,1));
-        this.acceleration = new Vector(-0.001, 0.01);
+    // this.velocityX = 1;
+    // this.velocityY = 1.3;
+    // this.x = x;
+    // this.y = y;
 
-        this.color = color;
-        this.size = 8;
+    this.location = new Vector(x,y);
+    this.velocity = new Vector(1, 1);
     }
-    draw() {
-       this.acceleration = Vector.subtract(this.mouse, this.location)
-       .normalize()
-       .multiply(Math.random());
+    
 
-        this.velocity.add(this.acceleration);
-        // set limit to 10 for more distributed particles
-        this.velocity.limit(5);
-        this.location.add(this.velocity);
+    draw(){
+    
+    this.location.add(this.velocity); //add a velocity to current location
+    this.checkCollision(); //check if it hits the border
+    //console.log(this.velocity);
+    //console.log(this.location);
+    //draws circle
+    this.ctx.beginPath();
+    this.ctx.fillStyle = this.color;
+    this.ctx.arc(this.location.x,this.location.y,this.size,0,Math.PI*2)
+    this.ctx.fill();
+    this.ctx.closePath();
 
-       this.checkCollision();
-
-        this.ctx.beginPath();
-        this.ctx.fillStyle = this.color;
-        this.ctx.arc(this.location.x, this.location.y, this.size, 0, Math.PI * 2);
-        this.ctx.fill();
-        this.ctx.closePath();
-        
     }
-    checkCollision() {
+//changing the this.x to this.location.x (also this.y) and the this.velocityX to this.velocity.x because we added the vector    
+    checkCollision(){
         if (this.location.x > this.$canvas.width) {
             this.location.x = 0;
         }
@@ -49,6 +49,8 @@ class Particle {
         }
     }
 
-}
+    }
 
-export default Particle;
+    
+
+    export default Particle;

@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>03 - balls - finished</title>
+    <link rel="icon" type="image/png" href="assets/img/babyhead.png"/>
+    <title>07 - data visualization</title>
 </head>
 <body>
+    <h1 class="title">Find out if your name is male or female</h1>
+    <form method="get" action="index.html" class="form-name">
+        <div class="form-general__field">
+            <label class="namelabel" for="name">your name:</label>
+            <input type="text" class="search" id="name" name="name" size="20" maxlength="20">
+        </div>
+    </form>
+<div class="canvasdiv">
     <canvas class="canvas" width="600" height="600"></canvas>
+</div>
+    
+    
     <script type="module" src="js/script.js"></script>
 </body>
 </html>
